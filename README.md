@@ -28,6 +28,6 @@ This repository contains data structure and algorithm codes.
 
 <ul>
   <li>add detailed steps for contribution friendly to absolute begineers</li>
-  <li>add information about hacktober fest and detailed contribution</li>
+  <li>add information about hacktober fest and opensource contribution</li>
 </ul>
 
