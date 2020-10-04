@@ -1,6 +1,6 @@
 # How to Make Your Contributions ?
 
-## Follow The Instructions:
+## Follow The Instructions for contributing using Github:
 
 - Fork this Repository using the button at the top
 - Create a new branch for your modifications
