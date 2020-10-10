@@ -1,8 +1,6 @@
-package twoPointerAlgorithm;
-
 import java.util.*;
 
-public class ArrayTripletSumBy2PointersAlgo {
+public class TwoPointersAlgo {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
