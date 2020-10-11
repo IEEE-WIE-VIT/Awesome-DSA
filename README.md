@@ -10,8 +10,9 @@ This repository contains data structure and algorithm codes.
 
 <ul>
 <li>This repository is structured language wise. Inside a language folder there are two more folders - Data Structures and Algorithms</li>
-<li> The path for adding a file containing the program should be - ```language/Data Structures/Data Structures.extension``` or ```language/Algorithms/Algoname.extension```</li>
-  <li>For data structures you can include one functionality only naming and path in that case - ```language/Data Structures/LinkedListDeleteEnd.extension```</li>
+<li> The path for adding a file containing the program should be - ```language/Data Structures/name_of_the_data_Structure/Data Structures.extension``` or ```language/Algorithms/Algoname.extension```</li>
+  <li>For data structures you can include one functionality only naming and path in that case - ```language/Data Structures/LinkedList/LinkedListDeleteEnd.extension```</li>
+  <li>If a folder corresponding to a Data Structures does not exsist, then make a new one</li>
   <li>This is begineer's friendly repository, so if you make mistake in making a PR members of WIE will help you out.</li>
   <li>So go ahead make your first PR</li>
 </ul>
@@ -28,7 +29,6 @@ This repository contains data structure and algorithm codes.
 ## TODO
 
 <ul>
-  <li>add detailed steps for contribution friendly to absolute begineers</li>
   <li>add information about hacktober fest and opensource contribution</li>
 </ul>
 
