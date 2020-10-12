@@ -26,12 +26,17 @@ This repository contains data structure and algorithm codes.
 ## How to make a PR
 
 - Fork the repository to your account.
-  <img src="assets/img/fork.png">
+   <img src="assets/img/fork.png">
   Forking
-  <img src="assets/img/forking.png">
+   <img src="assets/img/forking.png">
 - Add the changes on the forked repository
-- Make pull request to the master branch of this repository.
-- Wait for the mainters to review and accept the PR.
+- GO to the `Pull requests` section and Press `New pull request` button.
+   <img src="assets/img/New_PR.png">
+- Compare the changes you make with the master repo, press `Create pull request` button.
+   <img src="assets/img/compare_PR.png">
+- To merge the pull request, write a `Title`, `Leave a comment` and press `New pull request` button
+   <img src="assets/img/merge_PR.png">
+- Wait for the maintainers to review and accept the PR.
 
 ## What To Do
 
