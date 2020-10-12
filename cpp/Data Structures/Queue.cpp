@@ -1,72 +1,82 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define NUL nullptr
+#include "queue.h"
+using namespace std;
 
-struct node {
-    int data;
-    struct node *next;
-};
-struct node *head = NULL;
-
-struct node* create_node(int x)
+//Constructor por defecto
+template <typename T>
+Queue<T>::Queue()
 {
-    struct node* temp = (struct node*) malloc(1*sizeof(struct node));
-    temp->data = x;
-    temp->next = NULL;
-    return temp;
+    m_head = NULL;
+    m_last = NULL;
 }
-
-void print_queue(struct node *head)
+//Insertar
+template <typename T>
+void Queue<T>::add_end(T data_)
 {
-    struct node *ptr = head;
-    while (ptr!=NULL)
+    Node<T> *new_node = new Node<T>(data_);
+    if (!m_head)
     {
-        printf("%d\t",ptr->data);
-        ptr = ptr->next;
+        m_head = new_node;
     }
-    printf("\n");
-}
-
-struct node* enqueue(struct node *head, int x)
-{
-    if (head==NULL)
-        return create_node(x);
     else
     {
-        head->next = enqueue(head->next, x);
-        return head;
+        m_last->next = new_node;
     }
-    
+    m_last = new_node;
 }
 
-struct node* dequeue(struct node *head)
+//Obtener Nodo
+template <typename T>
+void Queue<T>::getInfoFirst()
 {
-    struct node* del_node = head;
-    head = head->next;
-    free(del_node);
-    return head;
+    if (!m_head)
+    {
+        cout << "The queue is empty" << endl;
+    }
+    else
+    {
+        cout << m_head->print();
+        cout << endl
+             << endl;
+    }
 }
 
-int main()
+//Eliminar nodos
+template <typename T>
+void Queue<T>::dell()
 {
-    int n,x;
-    scanf("%d",&n);
-    //Enqueueing
-    for(int i=0;i<n;i++)
+    if (!m_head)
     {
-        scanf("%d",&x);
-        head = enqueue(head, x);
-        print_queue(head);
+        cout << "The queue is empty" << endl;
     }
-
-    printf("\n");
-
-    //Dequeueing
-    for(int i=0;i<n;i++)
+    else
     {
-        head = dequeue(head);
-        print_queue(head);
+        Node<T> *temp = m_head;
+        m_head = m_head->next;
+        temp->next = NULL;
     }
-
-    return 0;
 }
+
+//Imprimir cola
+template <typename T>
+void Queue<T>::print()
+{
+    Node<T> *temp = m_head;
+    if (!m_head)
+    {
+        cout << "The queue is empty " << endl;
+    }
+    else
+    {
+        while (temp)
+        {
+            temp->print();
+            if (!temp->next)
+                cout << "NULL";
+            temp = temp->next;
+        }
+    }
+    cout << endl << endl;
+}
+
+template<typename T>
+Queue<T>::~Queue(){}
