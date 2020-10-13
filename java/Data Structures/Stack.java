@@ -1,7 +1,7 @@
 import java.util.*;
 class Stack
 {
-    int size=10;
+    int size=20;
     int stack[]=new int[size];
     int top;
     
@@ -69,9 +69,9 @@ class Stack
                             System.out.println("The top element of the stack is:"+top_element);
                             break;
                         }
-                case 4: System.out.println("Thanks for implementing");
+                case 4: System.out.println("Thanks for implementing your program");
                         System.exit(0);
-                default: System.out.println("Wrong Choice! Please try again!");
+                default: System.out.println("Wrong Choice! Please try again your option!");
                          break;
             }
         }
