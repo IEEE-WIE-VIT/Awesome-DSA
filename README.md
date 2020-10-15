@@ -12,7 +12,7 @@ Contribute Data Structure and Algorithm related codes for Hacktoberfest 2020!
 
 ## About
 
-This repository contains data structure and algorithm codes.
+This repository contains various data structure and algorithm programs in different languages.
 
 ## Contribution Guidelines
 
