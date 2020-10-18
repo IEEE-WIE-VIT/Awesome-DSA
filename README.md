@@ -21,6 +21,7 @@ This repository contains various data structure and algorithm programs in differ
 - For data structures you can include one functionality only naming and path in that case - ```language/Data Structures/LinkedList/LinkedListDeleteEnd.extension```.
 -  If a folder corresponding to a Data Structures does not exist, then make a new one.
 -  This is begineer's friendly repository, so if you make mistake in making a `pull request`(PR), members of WIE will help you out.
+-  No repetition of programs will be entertained.
 -  So go ahead make your first PR.
 
 ## How to make a PR
