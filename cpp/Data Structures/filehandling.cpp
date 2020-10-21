@@ -27,6 +27,11 @@ int main () {
    // open a file in read mode.
    ifstream infile; 
    infile.open("File.dat"); 
+ // append instead of overwrite
+   std::ofstream outfile;
+
+  outfile.open("test.txt", std::ios_base::app); 
+  outfile << "Data"; 
  
    cout << "Reading from the file" << endl; 
    infile >> data; 
