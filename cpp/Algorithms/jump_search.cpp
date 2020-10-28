@@ -1,61 +1,59 @@
-#include <iostream>
-#include <cmath>
+#include<bits/stdc++.h>
 using namespace std;
 
-#define MAX 100
-int search(int key);
-int a[MAX],n;
-int main()
-{
-   int i,key,result;
-   cout<<"\nEnter the number of elements: ";
-   cin>>n;
-   cout<<"\nEnter the elements of array: \n";
-   for(i=0;i<n;i++)
-   {
-         cin>>a[i];
-   }
-      cout<<"\n\nEnter the key you want to search: ";
-      cin>>key;
-      result=search(key);
-      if(result==-1)
-      {
-            cout<<"\nElement is not found in the array !\n";
-      }
-      else
-      {
-            cout<<"\nElement "<<key<<" is present at position "<<result;
-      }
-      return 0;
-}
-int search(int key)
-{
-   int jump_step,prev=0;
-   jump_step=floor(sqrt(n));
+int jump_search(int arr[], int n, int k) 
+{ 
+    int jump = sqrt(n); 
+    int index = 0; 
+    while (arr[jump] <= k && jump < n) { 
+        index = jump; 
+        jump += sqrt(n); 
+        if (jump > n-1) 
+            return -1; 
+    } 
 
-   while(a[prev]<key)
-   {
-       if(a[jump_step]>key || jump_step>=n)
-       {
-            break;
-       }
-       else
-       {
-                prev=jump_step;
-                jump_step=jump_step+floor(sqrt(n));
-       }
-   }
+    for(int j=index;j<jump;j++){ 
+        if (arr[j]==k) 
+            return j; 
+    }  
+    return -1; 
+} 
 
-   while(a[prev]<key)
-   {
-        prev++;
-   }
-   if(a[prev]==key)
-   {
-        return prev+1;
-   }
-   else
-   {
-        return -1;
-   }
+int main(){
+int n,key;
+  cout << "Enter size of the array:"<<endl;
+  cin >> n;
+  cout << "Enter the array elements:"<<endl;
+  int arr[n];
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
+  }
+
+  cout << "Enter the key to be searched:"<<endl;
+  cin >> key;
+  int res = jump_search(arr,n,key);
+  if (res != -1)
+    cout << key << " found at index " << res << endl;
+  else
+    cout << key << " not found in the array" << endl;
+  return 0;
 }
+
+
+/*
+Sample Input/Output:
+1. Enter size of the array:
+5
+Enter the array elements:
+12 23 31 40 57 61
+Enter the key to be searched:
+23
+Output: 23 found at index 1
+2. Enter size of the array:
+5
+Enter the array elements:
+12 23 31 40 57 61
+Enter the key to be searched:
+31
+Output: 31 not found in the array
+*/
