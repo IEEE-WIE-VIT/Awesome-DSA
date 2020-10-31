@@ -1,0 +1,19 @@
+graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+}
+
+visit = set() 
+
+def dfs(visit, graph, node):
+    if node not in visit:
+        print (node)
+        visit.add(node)
+        for neighbour in graph[node]:
+            dfs(visit, graph, neighbour)
+
+dfs(visit, graph, 'A')
